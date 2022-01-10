@@ -21,10 +21,10 @@ void main()
 	}
 	printf("enter 1(where elements of a / elements of b) for case 1\nenter 2(where elements of a == elements of b) for case 2\nenter 3(where elements of a is <= then elements of b) for case 3\nenter 4(where elements of a is >= then elements of b) for case 4\n");
 	scanf("%d",&rel);
-	printf("R={");
 	switch(rel)
 	{
 	case 1:
+		printf("R={");
 	       for(i=0;i<n;i++)
 	{
 	       for(j=0;j<m;j++)
@@ -36,8 +36,10 @@ void main()
 	       
 	   }
 	}
+	printf("}");
       	break;
 	case 2:
+		printf("R={");
 	    for(i=0;i<n;i++)
     {
 	     for(j=0;j<m;j++)
@@ -48,8 +50,10 @@ void main()
 	      }
 	   }
     }
+    printf("}");
         break;
     case 3:
+    	printf("R={");
 	    for(i=0;i<n;i++)
 	    {
 	     for(j=0;j<m;j++)
@@ -60,8 +64,10 @@ void main()
 	      }
 	     }
 	    }
+	    printf("}");
 	    break;
 	case 4:
+		printf("R={");
 	    for(i=0;i<n;i++)
 	    {
 	     for(j=0;j<m;j++)
@@ -72,8 +78,13 @@ void main()
 	      }
 	     }
 	    }
+	    printf("}");
 	    break;
+	    default:
+	    {	
+		  printf("\tsorry your input is invalid\t");
+		 break;
+		}
     }
-    printf("}");
 	getch();
 	}
