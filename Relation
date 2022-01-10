@@ -50,10 +50,10 @@ void main()
 	      }
 	   }
     }
-    printf("}");
+        printf("}");
         break;
-    case 3:
-    	printf("R={");
+      case 3:
+    	   printf("R={");
 	    for(i=0;i<n;i++)
 	    {
 	     for(j=0;j<m;j++)
@@ -80,11 +80,11 @@ void main()
 	    }
 	    printf("}");
 	    break;
-	    default:
+	default:
 	    {	
-		  printf("\tsorry your input is invalid\t");
-		 break;
-		}
+	      printf("\tsorry your input is invalid\t");
+	      break;
+	    }
     }
 	getch();
 	}
