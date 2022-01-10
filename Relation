@@ -1,0 +1,79 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	
+	int a[10],b[10],i,j,n,m,rel;
+	printf("enter the number of elements in domain a\n");
+	scanf("%d",&n);
+	printf("enter the %d natural numbers now\n",n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	printf("enter the number of elements in co-domain b\n");
+	scanf("%d",&m);
+	printf("enter the %d elements of D64 now\n",m);//elements of D64 are those elements who divides 64{1,2,4,8,16,32,64}
+	for(j=0;j<m;j++)
+	{
+	
+		scanf("%d",&b[j]);
+	}
+	printf("enter 1(where elements of a / elements of b) for case 1\nenter 2(where elements of a == elements of b) for case 2\nenter 3(where elements of a is <= then elements of b) for case 3\nenter 4(where elements of a is >= then elements of b) for case 4\n");
+	scanf("%d",&rel);
+	printf("R={");
+	switch(rel)
+	{
+	case 1:
+	       for(i=0;i<n;i++)
+	{
+	       for(j=0;j<m;j++)
+	   {
+	   	if(b[j]%a[i]==0)
+		 {  
+		 printf("(%d,%d)",a[i],b[j]);
+	     }
+	       
+	   }
+	}
+      	break;
+	case 2:
+	    for(i=0;i<n;i++)
+    {
+	     for(j=0;j<m;j++)
+	   {
+	     if(a[i]==b[j])
+	      {
+	     printf("(%d,%d)",a[i],b[j]);
+	      }
+	   }
+    }
+        break;
+    case 3:
+	    for(i=0;i<n;i++)
+	    {
+	     for(j=0;j<m;j++)
+	     {
+	     if(a[i]<=b[j])
+	      {
+	     printf("(%d,%d)",a[i],b[j]);
+	      }
+	     }
+	    }
+	    break;
+	case 4:
+	    for(i=0;i<n;i++)
+	    {
+	     for(j=0;j<m;j++)
+	     {
+	     if(a[i]>=b[j])
+	      {
+	     printf("(%d,%d)",a[i],b[j]);
+	      }
+	     }
+	    }
+	    break;
+    }
+    printf("}");
+	getch();
+	}
